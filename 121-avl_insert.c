@@ -48,10 +48,10 @@ avl_t *recur_insert_node(avl_t **tree, avl_t *parent, avl_t **new, int nval)
 		*tree = binary_tree_rotate_left(*tree);
 	}
 	else if (bal_val < -1 && (*tree)->right->n > nval)
-	{
+
 		(*tree)->right = binary_tree_rotate_right((*tree)->right);
 		*tree = binary_tree_rotate_left(*tree);
-	}
+
 	return (*tree);
 }
 
